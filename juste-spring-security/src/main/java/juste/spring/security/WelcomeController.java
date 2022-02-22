@@ -13,13 +13,13 @@ public class WelcomeController {
     }
 
     @GetMapping("/users")
-    @PreAuthorize("hasAnyRole('MANAGERS', 'USERS')") // no users, o user e o manager tem acesso a rota de user
+    //@PreAuthorize("hasAnyRole('MANAGERS', 'USERS')") // no users, o user e o manager tem acesso a rota de user
     public String users(){
         return "Usuário autorizado!";
     }
 
     @GetMapping("/managers")
-    @PreAuthorize("hasRole('MANAGERS')") // no manager, somente manager tem acesso a rota de manager
+    //@PreAuthorize("hasRole('MANAGERS')") // no manager, somente manager tem acesso a rota de manager
     public String managers(){
         return "Gerente autorizado!";
     }
